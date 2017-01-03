@@ -39,7 +39,7 @@ class Humanoid
   end
 
   def make_some
-    puts "CRAFTING #{@thing}""
+    puts "CRAFTING #{@thing}"
   end
 
   def shout(&block)
