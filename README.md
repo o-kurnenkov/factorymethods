@@ -1,9 +1,5 @@
 # Factorymethods
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/factorymethods`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +18,50 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+# Define factory class with static factory methods
+class Humanoid
+  # add ability to use deffactory macro
+  extend FactoryMethods
+
+  # Define necessary static factories
+  deffactory :call
+  deffactory :shout
+  deffactory :make_some
+
+  # define instance relevant methods
+  def initialize(thing)
+    @thing = thing
+  end
+
+  def call
+    puts 'CALL 911!'
+  end
+
+  def make_some
+    puts "CRAFTING #{@thing}""
+  end
+
+  def shout(&block)
+    puts "SHOUT: #{block.call}"
+  end
+end
+
+# Use your factories
+
+# without arguments
+Humanoid.call
+# => CALL 911!
+
+# with block
+Humanoid.shout { "humanoid instance says 'HELLO'" }
+# => SHOUT: humanoid instance says 'HELLO'
+
+# with arguments, passed to constructor
+Humanoid.make_some(:coffee)
+# => CRAFTING coffee
+
+```
 
 ## Development
 
@@ -32,5 +71,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/factorymethods.
+Bug reports and pull requests are welcome on GitHub at https://github.com/o-kurnenkov/factorymethods.
 
