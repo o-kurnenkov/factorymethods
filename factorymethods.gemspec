@@ -6,12 +6,13 @@ require 'factorymethods/version'
 Gem::Specification.new do |spec|
   spec.name          = "factorymethods"
   spec.version       = FactoryMethods::VERSION
+  spec.licenses      = ['MIT']
   spec.authors       = ["Oleksiy Kurnenkov"]
   spec.email         = ["oleksiy.kurnenkov@onapp.com"]
 
   spec.summary       = %q{DSL to define static factory methods}
   spec.description   = %q{Factory Method}
-  # spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/o-kurnenkov/factorymethods"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
