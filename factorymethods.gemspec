@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["oleksiy.kurnenkov@onapp.com"]
 
   spec.summary       = %q{DSL to define static factory methods}
-  spec.description   = %q{Factory Method}
+  spec.description   = %q{Create factory methods using convenient 'deffactory' macro}
   spec.homepage      = "https://github.com/o-kurnenkov/factorymethods"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
